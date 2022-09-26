@@ -10,18 +10,18 @@ public class UserInterface {
         System.out.println("Please choose from the meny.");
         System.out.println("1. Start the game\n2.Indroduction of the game\n9.Exit the game.");
 
-        //switch (scanner.nextInt()) {
+        switch (scanner.nextInt()) {
             case 1:
                 goNorth();
                 break;
             case 2:
-                goSouth();
+                goEast();
                 break;
             case 3:
-                goWest();
+                goSouth();
                 break;
             case 4:
-                goEast();
+                goWest();
             case 5:
                 help();
                 break;
@@ -36,3 +36,4 @@ public class UserInterface {
         }
     }
 }
+*/
