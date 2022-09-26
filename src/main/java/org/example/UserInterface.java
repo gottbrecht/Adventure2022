@@ -8,14 +8,13 @@ public class UserInterface {
 
         System.out.println("Welcome to the org.example.Adventure game!");
         System.out.println("Please choose from the menu.");
-        System.out.println("1. Start the game\n2.Introduction of the game\n9.Exit game");
+        System.out.println("1. Start the game\n2. Introduction of the game\n9. Exit game");
 
        switch (scanner.nextInt()) {
             case 1:
-                System.out.println("Go North");
-                break;
+                System.out.println("Life gives you many directions. You are to choose one. Which one do you choose");
             case 2:
-                System.out.println("Go East");
+                System.out.println("This game is about..blablabla");
                 break;
             case 3:
                 System.out.println("Go South");
