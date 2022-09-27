@@ -13,6 +13,8 @@ public class Room {
         this.name = name;
         this.description = description;
 
+
+
     }
     //Getter
     public String getName() {
@@ -23,7 +25,35 @@ public class Room {
     }
 
 
+    //Getter
+    public Room getNorth(){
+        return north;
+    }
+    public Room getWest(){
+        return west;
+    }
+    public Room getSouth(){
+        return south;
+    }
+    public Room getEast() {
+        return east;
+    }
 
+    //Setter
+    public void setNorth(Room north){
+    this.north = north;
+    }
+    public void setWest(Room west){
+        this.west = west;
+    }
+    public void setSouth(Room south){
+        this.south = south;
+    }
+    public void setEast(Room east){
+        this.east = east;
+    }
+    Room 1. setEast(Room 2);
+    Room 2. setWest(Room 1);
 
 
         }

@@ -7,12 +7,14 @@ public class UserInterface {
         Scanner scanner = new Scanner(System.in);
         Adventure adventure = new Adventure();
 
-        System.out.println("Welcome to the Car game!");
-        System.out.println("Description: in order to find the components to upgrade your sports car, you need to " +
-                "explorer the 9 different areas, and enter the areas where you can gather money or components. " +
-                "When you enter the last area, which is your goal of the game, you could gather the best components " +
-                "and the fancy upgrades, like a new steering wheel, or golden wheels." +
-                "You can choose to go north, south, east or west. You may also choose to look, or ask for help. " +
+        System.out.println("Welcome to the Pimp my ride game!");
+        System.out.println("Description: In order to upgrade your trashy car,\n you need to " +
+                "explorer the 9 different areas, and enter the areas where you can gather gadgets or components.\n " +
+                "When you enter the last area, which is your goal of the game,\n you enter the House of Diamonds " +
+                "Along the game  you get the fancy upgrades, like a new speaker, or the golden wheels." +
+                "\n You can choose to go north, south, east or west.\n You may also choose to look, or ask for help.\n " +
+                "When you head toward the wrong direction: Watch out for the wolves! " +
+                "You may have to go to another direction.\n " +
                 "If you want to end the game, just press exit. Enjoy your game!");
 
         do {
