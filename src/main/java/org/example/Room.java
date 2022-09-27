@@ -52,8 +52,6 @@ public class Room {
     public void setEast(Room east){
         this.east = east;
     }
-    Room 1. setEast(Room 2);
-    Room 2. setWest(Room 1);
 
 
         }
