@@ -35,11 +35,16 @@ public class UserInterface {
                     System.out.println("Going west");
                     break;
                 case "help":
-                    System.out.println("help");
+                    System.out.println("What help do you need?\n1. Money issues \n2. Find the way");
+                    int choice = 1;
+                    if (choice == 1) {
+                        System.out.println("Go back to garage and work hard in order to earn money.");
+                    }else {}
+
                     break;
                 case "look":
                     System.out.println("look");
-                    System.out.println("You are in: " +adventure.getCurrentRoom().getName());
+                    System.out.println("You are in: " + adventure.getCurrentRoom().getName());
                     System.out.println(adventure.getCurrentRoom().getDescription());
                     break;
                 case "exit":
