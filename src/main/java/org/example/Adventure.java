@@ -11,7 +11,17 @@ public class Adventure {
 
     }
 
-//private Room currentRoom = new Room("Room 1", "First room");
+
+    public boolean move(String direction) {
+        Room requestedRoom =null;
+        if (direction.charAt(0)=='n'){
+            requestedRoom =currentRoom.getNorth();
+
+        }
+
+    }
+
+    //private Room currentRoom = new Room("Room 1", "First room");
     public void createRooms() {
         Room room1 = new Room("Room 1", "Garage: Where your trashy car is parking");
         Room room2 = new Room("Room 2", "Painting room: Upgrade the surface of your car");
