@@ -39,7 +39,7 @@ public class UserInterface {
                     int choice = 1;
                     if (choice == 1) {
                         System.out.println("Go back to garage and work hard in order to earn money.");
-                    }else {}
+                    }else System.out.println("Go south");
 
                     break;
                 case "look":

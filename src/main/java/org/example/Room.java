@@ -13,8 +13,6 @@ public class Room {
         this.name = name;
         this.description = description;
 
-
-
     }
     //Getter
     public String getName() {
@@ -23,7 +21,6 @@ public class Room {
     public String getDescription() {
         return description;
     }
-
 
     //Getter
     public Room getNorth(){
@@ -52,6 +49,5 @@ public class Room {
     public void setEast(Room east){
         this.east = east;
     }
-
 
         }

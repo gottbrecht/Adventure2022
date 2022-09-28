@@ -1,8 +1,7 @@
 package org.example;
 public class Adventure {
 
-    private Room currentRoom;
-
+    private Room currentRoom= new Room("Room 1", "Garage: Where your trashy car is parking");
     public Room getCurrentRoom () {
         return currentRoom;
     }
