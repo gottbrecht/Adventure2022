@@ -3,6 +3,7 @@ package org.example;
 public class Room {
   private String name;
   private String description;
+  private String currentRoom;
 
   private Room north;
   private Room west;
@@ -12,8 +13,7 @@ public class Room {
     public Room(String name, String description) {
         this.name = name;
         this.description = description;
-
-
+        this.currentRoom=currentRoom;
 
     }
     //Getter
@@ -23,8 +23,12 @@ public class Room {
     public String getDescription() {
         return description;
     }
-
-
+public void setName () {
+        this.name=name;
+}
+public void setDescription(){
+        this.description=description;
+}
     //Getter
     public Room getNorth(){
         return north;
@@ -58,5 +62,24 @@ public class Room {
         this.east = east;
     }
 
+    public String getCurrentRoom() {
+        return currentRoom;
+    }
 
+    public static class room {
+        private Room currentRoom;
+
+        public Room getCurrentRoom () {
+            return currentRoom;
         }
+        public void setCurrentroom(Room room) {
+            this.currentRoom = room;
+        }
+    }
+    @Override
+    public String toString() {
+        return "Room {"+
+                "name= " +name+ '\''+ ", description='"+ description + '\''+'}';
+
+    }
+}

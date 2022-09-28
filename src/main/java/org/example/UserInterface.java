@@ -20,58 +20,8 @@ public class UserInterface {
                 "If you want to end the game, just press exit. Enjoy your game!");
         System.out.println(" Type direction here:");
 
-        do {
-            String playerInput = scanner.nextLine();
-            playerInput = playerInput.toLowerCase();
-            switch (playerInput) {
-                case "go north", "north":
-                    System.out.println("Going north");
-                    break;
-                case "go east", "east":
-                    System.out.println("Going east");
-                    break;
-                case "go south", "south":
-                    System.out.println("Going south");
-                    break;
-                case "go west", "west":
-                    System.out.println("Going west");
-                    break;
-                case "help":
-                    System.out.println("What do you need help with?\n1. Money issues \n2. Find the way");
-                    int choice = scanner.nextInt();
-                    scanner.nextLine();//Scanner bug
-                    if (choice == 1) {
-                        System.out.println("Go back to garage and work hard in order to earn money.");
-                    }
-                    else if (choice == 2) {
-                        System.out.println("......");
-                    }
-                    else {
-                        System.out.println( "You have not entered the correct answer!");
 
-                    }
-
-                    break;
-                case "look":
-                    System.out.println("look");
-                    System.out.println("You are in: " + adventure.getCurrentRoom().getName());
-                    System.out.println(adventure.getCurrentRoom().getDescription());
-                    break;
-                case "exit":
-                    System.out.println("Exit - ending game");
-                    break;
-            }
-        } while (true);
     }
 
-    public static class Player {
-        private Room currentRoom;
 
-        public Room getCurrentRoom () {
-            return currentRoom;
-        }
-        public void setCurrentroom(Room room) {
-            this.currentRoom = room;
-        }
-    }
 }

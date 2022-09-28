@@ -1,66 +1,58 @@
 package org.example;
+import java.util.Scanner;
 public class Adventure {
 
-    private Room currentRoom;
+Room room = new Room("test", "test");
 
-    public Room getCurrentRoom () {
-        return currentRoom;
-    }
-    public void setCurrentroom(Room room){
-        this.currentRoom = room;
+public void start() {
+    do {
+        Scanner scanner = new Scanner(System.in);
+        String playerInput = scanner.nextLine();
+        playerInput = playerInput.toLowerCase();
+        switch (playerInput) {
+            case "go north", "north":
+                System.out.println("Going north");
+                break;
+            case "go east", "east":
+                System.out.println("Going east");
+                break;
+            case "go south", "south":
+                System.out.println("Going south");
+                break;
+            case "go west", "west":
+                System.out.println("Going west");
+                break;
+            case "help":
+                System.out.println("What do you need help with?\n1. Money issues \n2. Tell me that I am handsome");
+                int choice = scanner.nextInt();
+                scanner.nextLine();//Scanner bug
+                if (choice == 1) {
+                    System.out.println("Go back to garage and work hard in order to earn money.");
+                } else if (choice == 2) {
+                    System.out.println("You are handsome.");
+                } else {
+                    System.out.println("You have not entered the correct answer!");
 
-    }
+                }
 
-
-    public boolean move(String direction) {
-        Room requestedRoom =null;
-        if (direction.charAt(0)=='n'){
-            requestedRoom =currentRoom.getNorth();
-
+                break;
+            case "look":
+                System.out.println("look");
+                System.out.println("You are in: " + room.getName());
+                System.out.println(room.getCurrentRoom());
+                System.out.println(room.getDescription());
+                break;
+            case "exit":
+                System.out.println("Exit - ending game");
+                break;
         }
-
-    }
-
-    //private Room currentRoom = new Room("Room 1", "First room");
-    public void createRooms() {
-        Room room1 = new Room("Room 1", "Garage: Where your trashy car is parking");
-        Room room2 = new Room("Room 2", "Painting room: Upgrade the surface of your car");
-        Room room3 = new Room("Room 3", "Tires Factory: Upgrade your tires");
-        Room room4 = new Room("Room 4", "Electronic House: Rainbow diode lights");
-        Room room5 = new Room("Room 5", "House Of Diamonds: End station for diamond logo and gear");
-        Room room6 = new Room("Room 6", "Sound House: Upgrade your speaker: b&o sound system");
-        Room room7 = new Room("Room 7", "Motor Room: More Horsepower for your baby");
-        Room room8 = new Room("Room 8", "Gadget Room: Get your Soda-and Popcorn Machine, " +
-                "massage chair, mocha machine");
-        Room room9 = new Room("Room 9", "Interior Hall: Leather seats, fur carpet, movie screen");
-
-
-        room1.setEast(room2);
-        room1.setSouth(room4);
-
-        room2.setEast(room3);
-        room2.setWest(room1);
-
-        room3.setWest(room2);
-        room3.setSouth(room6);
-
-        room4.setNorth(room1);
-        room4.setSouth(room7);
-
-        room5.setSouth(room8);
-
-        room6.setSouth(room9);
-        room6.setNorth(room3);
-
-        room7.setNorth(room4);
-        room7.setEast(room8);
-
-        room9.setNorth(room6);
-        room9.setWest(room8);
-    }
-
+    } while (true);
 
 }
+    }
+
+
+
 
 
 
