@@ -1,11 +1,13 @@
 package org.example;
-
+/*Controller-princippet: Adventure bliver controller og står for: 1. adskillelsen ml.
+brugergrænsefladen og spillet(domæneobjekterne. 2. styring og koordinering af domæneobjekter*/
 import java.util.Scanner;
 public class UserInterface {
 
     public void start() {
         Scanner scanner = new Scanner(System.in);
         Adventure adventure = new Adventure();
+
 
         System.out.println("Welcome to the Pimp My Ride game!\n");
         System.out.println(" Description:\n In order to upgrade your trashy car,\n you need to " +

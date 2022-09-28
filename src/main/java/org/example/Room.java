@@ -1,57 +1,72 @@
 package org.example;
 
 public class Room {
-  private String name;
-  private String description;
+    private String name;
+    private String description;
+    private String direction;
+    private String go;
 
-  private Room north;
-  private Room west;
-  private Room south;
-  private Room east;
+    private Room north;
+    private Room west;
+    private Room south;
+    private Room east;
 
-    public Room(String name, String description) {
+
+    //Konstruktør
+    public Room(String name, String description, String direction, String go) {
         this.name = name;
         this.description = description;
-
-
-
+        this.direction = direction;
+        this.go = go;
     }
+
     //Getter
+    public String getDirection() {
+        return direction;
+    }
+
     public String getName() {
         return name;
     }
+
     public String getDescription() {
         return description;
     }
 
 
     //Getter
-    public Room getNorth(){
+    public Room getNorth() {
         return north;
     }
-    public Room getWest(){
+
+    //Setter
+    public void setNorth(Room north) {
+        this.north = north;
+    }
+
+    public Room getWest() {
         return west;
     }
-    public Room getSouth(){
+
+    public void setWest(Room west) {
+        this.west = west;
+    }
+
+    public Room getSouth() {
         return south;
     }
+
+    public void setSouth(Room south) {
+        this.south = south;
+    }
+
     public Room getEast() {
         return east;
     }
 
-    //Setter
-    public void setNorth(Room north){
-    this.north = north;
-    }
-    public void setWest(Room west){
-        this.west = west;
-    }
-    public void setSouth(Room south){
-        this.south = south;
-    }
-    public void setEast(Room east){
+    public void setEast(Room east) {
         this.east = east;
     }
 
 
-        }
+}

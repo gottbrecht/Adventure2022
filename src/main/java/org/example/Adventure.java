@@ -1,17 +1,7 @@
 package org.example;
 public class Adventure {
 
-    private Room currentRoom;
-
-    public Room getCurrentRoom () {
-        return currentRoom;
-    }
-    public void setCurrentroom(Room room){
-        this.currentRoom = room;
-
-    }
-
-//private Room currentRoom = new Room("Room 1", "First room");
+    private Room currentRoom = new Room("Room 1", "First room");
     public void createRooms() {
         Room room1 = new Room("Room 1", "Garage: Where your trashy car is parking");
         Room room2 = new Room("Room 2", "Painting room: Upgrade the surface of your car");
