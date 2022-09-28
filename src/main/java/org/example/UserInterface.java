@@ -12,7 +12,8 @@ public class UserInterface {
                 "explorer the 9 different areas, and enter the areas where you can gather gadgets or components.\n " +
                 "When you enter the last area, which is your goal of the game,\n you enter House Of Diamonds.\n" +
                 " Along the game, you get the fancy upgrades, like a new speaker, or the golden wheels." +
-                "\n You can type 'go north', 'south', 'east' or 'west'.\n You may also choose to look, or ask for help.\n " +
+                "\n You can type 'go north', 'south', 'east' or 'west'.\n You may also choose to type 'look', to repeat" +
+                " description of the area, or 'help'.\n " +
                 "When you head toward the wrong direction: Watch out for the wolves! " +
                 "You may have to go to another direction.\n " +
                 "If you want to end the game, just press exit. Enjoy your game!");
@@ -35,11 +36,11 @@ public class UserInterface {
                     System.out.println("Going west");
                     break;
                 case "help":
-                    System.out.println("What help do you need?\n1. Money issues \n2. Find the way");
+                    System.out.println("What do you need help with?\n1. Money issues \n2. Find the way");
                     int choice = 1;
                     if (choice == 1) {
-                        System.out.println("Go back to garage and work hard in order to earn money.");
-                    }else {}
+
+                    }else {}System.out.println("Go back to garage and work hard in order to earn money.");
 
                     break;
                 case "look":
