@@ -29,16 +29,6 @@ public class Room {
     public Room getNorth(){
         return north;
     }
-    public Room getWest(){
-        return west;
-    }
-    public Room getSouth(){
-        return south;
-    }
-    public Room getEast() {
-        return east;
-    }
-
     //Setter
     public void setNorth(Room north) {
         this.north = north;

@@ -38,10 +38,18 @@ public class UserInterface {
                     break;
                 case "help":
                     System.out.println("What do you need help with?\n1. Money issues \n2. Find the way");
-                    int choice = 1;
+                    int choice = scanner.nextInt();
+                    scanner.nextLine();//Scanner bug
                     if (choice == 1) {
+                        System.out.println("Go back to garage and work hard in order to earn money.");
+                    }
+                    else if (choice == 2) {
+                        System.out.println("......");
+                    }
+                    else {
+                        System.out.println( "You have not entered the correct answer!");
 
-                    }else {}System.out.println("Go back to garage and work hard in order to earn money.");
+                    }
 
                     break;
                 case "look":
