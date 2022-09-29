@@ -8,6 +8,7 @@ public class Room {
   private String currentRoom;
   private String item;
   private String itemList;
+  private String itemName;
 
 
   private Room north;
@@ -23,7 +24,7 @@ public class Room {
         this.currentRoom=currentRoom;
         this.item = item;
         this.itemList = itemList;
-
+        this.itemName = itemName;
     }
     //Getter
     public String getName() {
