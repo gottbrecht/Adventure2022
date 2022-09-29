@@ -3,7 +3,7 @@ package org.example;
 import java.util.Scanner;
 public class UserInterface {
     Map map = new Map();
-    Room room = new Room("test", "test");
+    Room room = new Room(".",".");
     Player player = new Player();
 
     public void run() {
@@ -21,11 +21,9 @@ public class UserInterface {
                 "When you head toward the wrong direction: Watch out for the wolves! " +
                 "You may have to go to another direction.\n " +
                 "If you want to end the game, just press exit. Enjoy your game!");
-        System.out.println(" Type direction here:");
+        System.out.println(" Your car is parked in the garage");
+        System.out.println(" Type the direction you want to go here:");
 
-
-
-    public void start() {
         do {
             Scanner sc = new Scanner(System.in);
             String playerInput = scanner.nextLine();
@@ -39,13 +37,25 @@ public class UserInterface {
                         System.out.println("You can not go that way!");
                     break;
                 case "go east", "east":
-                    System.out.println("Going east");
+                    if (player.east()){
+                        System.out.println("Going east" + player.getCurrentRoom() +
+                                room.getDescription());
+                    }else
+                    System.out.println("You can not go that way!");
                     break;
                 case "go south", "south":
-                    System.out.println("Going south");
+                    if (player.south()) {
+                        System.out.println("Going south " + player.getCurrentRoom() +
+                                room.getDescription());
+                    }else
+                    System.out.println("You can not go that way!");
                     break;
                 case "go west", "west":
-                    System.out.println("Going west");
+                    if (player.west()) {
+                        System.out.println("Going west " + player.getCurrentRoom() +
+                                room.getDescription());
+                    }else
+                        System.out.println("You can not go that way!");
                     break;
                 case "help":
                     System.out.println("What do you need help with?\n1. Money issues \n2. Tell me that I am handsome");
@@ -75,5 +85,4 @@ public class UserInterface {
 
 
     }
-}
 }
