@@ -1,5 +1,5 @@
 package org.example;
-
+import java.util.ArrayList;
 import org.example.Room;
 
 public class Player {
@@ -47,4 +47,5 @@ else {
 }
     }
 
+    private final ArrayList<Item> itemList = new ArrayList<>();
 }

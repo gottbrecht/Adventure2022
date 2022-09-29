@@ -4,6 +4,9 @@ public class Room {
   private String name;
   private String description;
   private String currentRoom;
+  private String item;
+  private final String itemList;
+
 
   private Room north;
   private Room west;
@@ -17,6 +20,7 @@ public class Room {
         this.description = description;
         this.currentRoom=currentRoom;
 
+
     }
     //Getter
     public String getName() {
@@ -25,6 +29,13 @@ public class Room {
     public String getDescription() {
         return description;
     }
+    public String getItem() {
+        return item;
+    }
+    public String getItemList() {
+        return itemList;
+    }
+
 public void setName () {
         this.name=name;
 }
@@ -64,6 +75,20 @@ public void setDescription(){
         this.east = east;
     }
 
+    public String getCurrentRoom() {
+        return currentRoom;
+    }
+
+    public static class room {
+        private Room currentRoom;
+
+        public Room getCurrentRoom () {
+            return currentRoom;
+        }
+        public void setCurrentroom(Room room) {
+            this.currentRoom = room;
+        }
+    }
     @Override
     public String toString() {
         return "Room {"+
