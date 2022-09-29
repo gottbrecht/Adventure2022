@@ -1,11 +1,13 @@
 package org.example;
 
+import java.util.ArrayList;
+
 public class Room {
   private String name;
   private String description;
   private String currentRoom;
   private String item;
-  private final String itemList;
+  private String itemList;
 
 
   private Room north;
@@ -19,7 +21,8 @@ public class Room {
         this.name = name;
         this.description = description;
         this.currentRoom=currentRoom;
-
+        this.item = item;
+        this.itemList = itemList;
 
     }
     //Getter

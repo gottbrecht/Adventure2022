@@ -47,5 +47,5 @@ else {
 }
     }
 
-    private final ArrayList<Item> itemList = new ArrayList<>();
+    private final ArrayList<String> itemList = new ArrayList<>();
 }
