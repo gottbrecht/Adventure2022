@@ -14,6 +14,19 @@ public class Player {
 
     }
 
+    public boolean north() {
+        return false;
+    }
+    public boolean east() {
+        return false;
+    }
+    public boolean south() {
+        return true;
+    }
+    public boolean west() {
+        return true;
+    }
+
     public boolean move(String direction) {
         Room requestedRoom = null;
         if (direction.charAt(0) == 'n') {

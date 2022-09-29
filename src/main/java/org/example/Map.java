@@ -1,6 +1,7 @@
 package org.example;
 
 public class Map {
+   private Room startRoom;
     private Room currentRoom = new Room("Room 1", "Garage");
     public Map(){
      Room currentRoom;
@@ -40,7 +41,15 @@ public class Map {
 
         room9.setNorth(room6);
         room9.setWest(room8);
+
+        startRoom =room1;
     }
+    public Room getStartRoom() {
+       return startRoom;
+   }
 
 
+   public static class Item {
+
+   }
 }

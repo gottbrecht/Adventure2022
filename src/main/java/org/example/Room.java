@@ -10,6 +10,8 @@ public class Room {
   private Room south;
   private Room east;
 
+
+
     public Room(String name, String description) {
         this.name = name;
         this.description = description;
@@ -62,20 +64,6 @@ public void setDescription(){
         this.east = east;
     }
 
-    public String getCurrentRoom() {
-        return currentRoom;
-    }
-
-    public static class room {
-        private Room currentRoom;
-
-        public Room getCurrentRoom () {
-            return currentRoom;
-        }
-        public void setCurrentroom(Room room) {
-            this.currentRoom = room;
-        }
-    }
     @Override
     public String toString() {
         return "Room {"+
