@@ -46,8 +46,5 @@ else {
     return false;
 }
     }
-    public void addItem(Item item) {
-        itemList.add(item);
-    }
-    private final ArrayList<String> itemList = new ArrayList<>();
+
 }

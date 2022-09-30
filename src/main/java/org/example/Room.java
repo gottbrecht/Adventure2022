@@ -6,10 +6,6 @@ public class Room {
   private String name;
   private String description;
   private String currentRoom;
-  private String item;
-  private String itemList;
-  private String itemName;
-
 
   private Room north;
   private Room west;
@@ -22,9 +18,7 @@ public class Room {
         this.name = name;
         this.description = description;
         this.currentRoom=currentRoom;
-        this.item = item;
-        this.itemList = itemList;
-        this.itemName = itemName;
+
     }
     //Getter
     public String getName() {
@@ -32,12 +26,6 @@ public class Room {
     }
     public String getDescription() {
         return description;
-    }
-    public String getItem() {
-        return item;
-    }
-    public String getItemList() {
-        return itemList;
     }
 
 public void setName () {
