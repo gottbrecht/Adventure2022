@@ -18,5 +18,5 @@ public class Item {
         this.itemName = itemName;
     }
 
-    private final ArrayList<Item> itemList = new ArrayList<>();
+    //private final ArrayList<Item> itemList = new ArrayList<>();
 }
