@@ -27,8 +27,11 @@ public class Item {
         this.carPolish = carPolish;
 
     }
-
+    ArrayList<String> list=new ArrayList<String>();//Creating arraylist
     private final ArrayList<Item> Item = new ArrayList<>();
+    /*list.add("cash");
+    list.add("goldenWheels");
+    list.add("carPolish");*/
 
     @Override
     public String toString() {
