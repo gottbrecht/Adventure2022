@@ -11,7 +11,21 @@ public class Room {
     private Room south;
     private Room east;
 
-    private ArrayList<Item> items = new ArrayList<>();
+    private ArrayList<String> items = new ArrayList<>(); {
+        items.add("cash");
+        items.add("golden wheels");
+        items.add("car paint");
+        items.add("diamond steering wheel");
+        items.add("coffe machine");
+        items.add("popcorn machine");
+        items.add("surround sound-system");
+        items.add("rainbow lights");
+        items.add("v12 motor");
+        items.add("fur carpet");
+        items.add("leather seats");
+        items.add("soda machine");
+        items.add("movie screen");
+    }
 
     public Room(String name, String description) {
         this.name = name;
