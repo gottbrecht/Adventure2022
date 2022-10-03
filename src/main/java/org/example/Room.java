@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.ArrayList;
+
 public class Room {
   private String name;
   private String description;
@@ -25,6 +27,7 @@ public class Room {
     public String getDescription() {
         return description;
     }
+
 public void setName () {
         this.name=name;
 }
@@ -64,6 +67,20 @@ public void setDescription(){
         this.east = east;
     }
 
+    public String getCurrentRoom() {
+        return currentRoom;
+    }
+
+    public static class room {
+        private Room currentRoom;
+
+        public Room getCurrentRoom () {
+            return currentRoom;
+        }
+        public void setCurrentroom(Room room) {
+            this.currentRoom = room;
+        }
+    }
     @Override
     public String toString() {
         return "Room {"+
