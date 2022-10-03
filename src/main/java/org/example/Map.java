@@ -19,12 +19,17 @@ public class Map {
                 "massage chair, mocha machine");
         Room room9 = new Room("Room 9", "Interior Hall: Leather seats, fur carpet, movie screen");
 
+        Item lamp = new Item("Lamp", "A shiny brass lamp");
+        Item shoe = new Item("Shoe", "An old wornout shoe - the left one it seems");
 
         room1.setEast(room2);
         room1.setSouth(room4);
 
+        room1.addItem(lamp);
+
         room2.setEast(room3);
         room2.setWest(room1);
+        room2.addItem(shoe);
 
         room3.setWest(room2);
         room3.setSouth(room6);
