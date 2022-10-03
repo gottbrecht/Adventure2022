@@ -2,6 +2,8 @@ package org.example;
 
 import org.example.Room;
 
+import java.util.ArrayList;
+
 public class Player {
     private Room currentRoom;
 
@@ -13,20 +15,20 @@ public class Player {
         this.currentRoom = room;
 
     }
-
-    public boolean north() {
-        return false;
-    }
-    public boolean east() {
-        return false;
-    }
-    public boolean south() {
-        return true;
-    }
-    public boolean west() {
-        return true;
-    }
-
+public boolean north(){
+        return north();
+}
+public boolean east(){
+        return east();
+}
+public boolean south(){
+        return south();
+}
+public boolean west(){
+        return west();
+}
+private ArrayList <Item> inventory;
+    
     public boolean move(String direction) {
         Room requestedRoom = null;
         if (direction.charAt(0) == 'n') {

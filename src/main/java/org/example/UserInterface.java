@@ -3,7 +3,8 @@ package org.example;
 import java.util.Scanner;
 public class UserInterface {
     Map map = new Map();
-    Room room = new Room(".",".");
+
+    Room room = new Room("",".");
     Player player = new Player();
 
     public void run() {
@@ -30,28 +31,28 @@ public class UserInterface {
             playerInput = playerInput.toLowerCase();
             switch (playerInput) {
                 case "go north", "north":
-                    if (player.north()) {
+                    if (adventure.north()) {
                         System.out.println("Going north" + player.getCurrentRoom() +
                                 map.getStartRoom() + room.getDescription());
                     } else
                         System.out.println("You can not go that way!");
                     break;
                 case "go east", "east":
-                    if (player.east()){
+                    if (adventure.east()){
                         System.out.println("Going east" + player.getCurrentRoom() +
                                 room.getDescription());
                     }else
                     System.out.println("You can not go that way!");
                     break;
                 case "go south", "south":
-                    if (player.south()) {
+                    if (adventure.south()) {
                         System.out.println("Going south " + player.getCurrentRoom() +
                                 room.getDescription());
                     }else
                     System.out.println("You can not go that way!");
                     break;
                 case "go west", "west":
-                    if (player.west()) {
+                    if (adventure.west()) {
                         System.out.println("Going west " + player.getCurrentRoom() +
                                 room.getDescription());
                     }else

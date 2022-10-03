@@ -2,9 +2,10 @@ package org.example;
 
 public class Map {
    private Room startRoom;
-    private Room currentRoom = new Room("Room 1", "Garage");
+    private Room currentRoom= new Room("","");
+
+
     public Map(){
-     Room currentRoom;
 
     //private Room currentRoom = new Room("Room 1", "First room");
         Room room1 = new Room("Room 1", "Garage: Where your trashy car is parking");
@@ -49,7 +50,7 @@ public class Map {
    }
 
 
-   public static class Item {
+
 
    }
-}
+

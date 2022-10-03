@@ -3,7 +3,7 @@ package org.example;
 public class Room {
   private String name;
   private String description;
-  private String currentRoom;
+
 
   private Room north;
   private Room west;
@@ -15,7 +15,7 @@ public class Room {
     public Room(String name, String description) {
         this.name = name;
         this.description = description;
-        this.currentRoom=currentRoom;
+
 
     }
     //Getter
