@@ -19,17 +19,30 @@ public class Map {
                 "massage chair, mocha machine");
         Room room9 = new Room("Room 9", "Interior Hall: Leather seats, fur carpet, movie screen");
 
-        Item lamp = new Item("Lamp", "A shiny brass lamp");
-        Item shoe = new Item("Shoe", "An old wornout shoe - the left one it seems");
+        Item cash = new Item("cash", "Go work in the garage and earn money");
+        Item golden wheels = new Item("golden wheels", "pure 18 karat gold");
+        Item car paint = new Item("car paint", "")
+        items.add("golden wheels");
+        items.add("car paint");
+        items.add("diamond steering wheel");
+        items.add("coffe machine");
+        items.add("popcorn machine");
+        items.add("surround sound-system");
+        items.add("rainbow lights");
+        items.add("v12 motor");
+        items.add("fur carpet");
+        items.add("leather seats");
+        items.add("soda machine");
+        items.add("movie screen");
 
         room1.setEast(room2);
         room1.setSouth(room4);
 
-        room1.addItem(lamp);
+        room1.addItem(cash);
 
         room2.setEast(room3);
         room2.setWest(room1);
-        room2.addItem(shoe);
+        room2.addItem(golden wheels);
 
         room3.setWest(room2);
         room3.setSouth(room6);

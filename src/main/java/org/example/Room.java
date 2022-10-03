@@ -11,25 +11,15 @@ public class Room {
     private Room south;
     private Room east;
 
-    private ArrayList<String> items = new ArrayList<>(); {
-        items.add("cash");
-        items.add("golden wheels");
-        items.add("car paint");
-        items.add("diamond steering wheel");
-        items.add("coffe machine");
-        items.add("popcorn machine");
-        items.add("surround sound-system");
-        items.add("rainbow lights");
-        items.add("v12 motor");
-        items.add("fur carpet");
-        items.add("leather seats");
-        items.add("soda machine");
-        items.add("movie screen");
-    }
+    private ArrayList<Item> items = new ArrayList<>();
 
     public Room(String name, String description) {
         this.name = name;
         this.description = description;
+    }
+
+    public void addItem(Item item) {
+        items.add(item);
     }
 
     //Getter
@@ -76,7 +66,7 @@ public class Room {
         this.east = east;
     }
 
-    public ArrayList<Item> getItems() {
+    public ArrayList<String> getItems() {
         return items;
     }
 
