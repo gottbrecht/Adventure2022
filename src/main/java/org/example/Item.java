@@ -1,3 +1,5 @@
+package org.example;
+
 import java.util.ArrayList;
 
 public class Item {
@@ -35,7 +37,7 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item{" +
+        return "org.example.Item{" +
                 "item='" + item + "itemList=" + itemList + "itemName='" + itemName;
 
     }
