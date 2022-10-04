@@ -4,7 +4,6 @@ public class Map {
    private Room startRoom;
     private Room currentRoom= new Room("","");
 
-
     public Map(){
 
     //private Room currentRoom = new Room("Room 1", "First room");
@@ -20,32 +19,31 @@ public class Map {
         Room room9 = new Room("Room 9", "Interior Hall: Leather seats, fur carpet, movie screen");
 
         Item cash = new Item("cash", "Go work in the garage and earn money");
-        Item golden wheels = new Item("golden wheels", "pure 18 karat gold");
-        Item car paint = new Item("car paint", "")
-        items.add("golden wheels");
-        items.add("car paint");
-        items.add("diamond steering wheel");
-        items.add("coffe machine");
-        items.add("popcorn machine");
-        items.add("surround sound-system");
-        items.add("rainbow lights");
-        items.add("v12 motor");
-        items.add("fur carpet");
-        items.add("leather seats");
-        items.add("soda machine");
-        items.add("movie screen");
+        Item goldenWheels = new Item("golden wheels", "pure 18 karat gold");
+        Item carPaint = new Item("car paint", "new advanced car paint");
+        Item diamondSteeringWheel = new Item("diamond steering wheel", "");
+        Item coffeMachine = new Item("coffee machine", "Express coffee in one 1 minut");
+        Item popcornMachine = new Item ("popcorn machine", "fresh made popcorn");
+        Item surroundSoundSystem =new Item ("surround sound system","B&O surround steroes");
+        Item rainbowLights =new Item ("rainbow lights", "colourful lights under the car");
+        Item motor =new Item ("v12 motor", "upgrade the motor to v12 with great hourse power");
+        Item carpet =new Item ("fur carpet", "fancy carpet for the car");
+        Item leatherSeats =new Item("leather seats","top soft leather seats");
+        Item sodaMachine=new Item("soda machine", "fresh made soda");
+        Item screen=new Item("movie screen", "watch moive in the car");
+
 
         room1.setEast(room2);
         room1.setSouth(room4);
-
         room1.addItem(cash);
 
         room2.setEast(room3);
         room2.setWest(room1);
-        room2.addItem(golden wheels);
+        room2.addItem(carPaint);
 
         room3.setWest(room2);
         room3.setSouth(room6);
+        room3.addItem(goldenWheels);
 
         room4.setNorth(room1);
         room4.setSouth(room7);
