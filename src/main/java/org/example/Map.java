@@ -21,17 +21,18 @@ public class Map {
         Item cash = new Item("cash", "Go work in the garage and earn money");
         Item goldenWheels = new Item("golden wheels", "pure 18 karat gold");
         Item carPaint = new Item("car paint", "new advanced car paint");
-        Item diamondSteeringWheel = new Item("diamond steering wheel", "");
-        Item coffeMachine = new Item("coffee machine", "Express coffee in one 1 minut");
-        Item popcornMachine = new Item ("popcorn machine", "fresh made popcorn");
-        Item surroundSoundSystem =new Item ("surround sound system","B&O surround steroes");
+        Item diamond = new Item("diamond steering wheel", "diamond logo");
+
+        Item soundSystem =new Item ("surround sound system","B&O surround steroes");
         Item rainbowLights =new Item ("rainbow lights", "colourful lights under the car");
         Item motor =new Item ("v12 motor", "upgrade the motor to v12 with great hourse power");
         Item carpet =new Item ("fur carpet", "fancy carpet for the car");
         Item leatherSeats =new Item("leather seats","top soft leather seats");
-        Item sodaMachine=new Item("soda machine", "fresh made soda");
         Item screen=new Item("movie screen", "watch moive in the car");
 
+        Item coffeMachine = new Item("coffee machine", "Express coffee in one 1 minut");
+        Item popcornMachine = new Item ("popcorn machine", "fresh made popcorn");
+        Item sodaMachine=new Item("soda machine", "fresh made soda");
 
         room1.setEast(room2);
         room1.setSouth(room4);
@@ -47,17 +48,31 @@ public class Map {
 
         room4.setNorth(room1);
         room4.setSouth(room7);
+        room4.addItem(rainbowLights);
 
         room5.setSouth(room8);
+        room5.addItem(diamond);
 
         room6.setSouth(room9);
         room6.setNorth(room3);
+        room6.addItem(soundSystem);
 
         room7.setNorth(room4);
         room7.setEast(room8);
+        room7.addItem(motor);
+
+        room8.setNorth(room5);
+        room8.setWest(room7);
+        room8.setEast(room9);
+        room8.addItem(coffeMachine);
+        room8.addItem(sodaMachine);
+        room8.addItem(popcornMachine);
 
         room9.setNorth(room6);
         room9.setWest(room8);
+        room9.addItem(leatherSeats);
+        room9.addItem(carpet);
+        room9.addItem(screen);
 
         startRoom =room1;
     }
