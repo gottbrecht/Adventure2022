@@ -32,8 +32,7 @@ public class UserInterface {
             switch (playerInput) {
                 case "go north", "north":
                     if (adventure.north()) {
-                        System.out.println("Going north" + player.getCurrentRoom() +
-                                map.getStartRoom() + room.getDescription());
+                        System.out.println("Going north" + player.getCurrentRoom() + room.getDescription());
                     } else
                         System.out.println("You can not go that way!");
                     break;

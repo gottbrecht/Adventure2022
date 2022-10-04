@@ -2,7 +2,7 @@ package org.example;
 
 public class Map {
    private Room startRoom;
-    private Room currentRoom= new Room("","");
+    private Room currentRoom;
 
     public Map(){
 
