@@ -66,7 +66,7 @@ public class Room {
         this.east = east;
     }
 
-    public ArrayList<String> getItems() {
+    public ArrayList<Item> getItems() {
         return items;
     }
 
