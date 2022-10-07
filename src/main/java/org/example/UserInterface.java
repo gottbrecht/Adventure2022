@@ -30,7 +30,7 @@ public class UserInterface {
             String playerInput = scanner.nextLine();
             playerInput = playerInput.toLowerCase();
             switch (playerInput) {
-                case "go north", "north":
+                case "go north", "north","n":
                     if (adventure.north()) {
                         System.out.println("Going north" + player.getCurrentRoom() + room.getDescription());
                     } else
