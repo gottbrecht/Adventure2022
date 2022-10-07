@@ -1,15 +1,18 @@
 package org.example;
-import java.util.Scanner;
+
 public class Adventure {
 
 
-    Room room = new Room("", "");
     Map map = new Map();
     Player player = new Player();
-    UserInterface ui = new UserInterface();
 
+    public Adventure(){
+        player.setCurrentroom(map.getStartRoom());
+    }
     public boolean north() {
-        if (player.getCurrentRoom().getNorth() == player.getCurrentRoom()) {
+        if  (player.getCurrentRoom().getNorth() != null) {
+            player.setCurrentroom(player.getCurrentRoom().getNorth());
+            System.out.println(player.getCurrentRoom().getDescription());
             return true;
 
         } else {
@@ -19,7 +22,9 @@ public class Adventure {
     }
 
     public boolean east() {
-        if (player.getCurrentRoom().getEast() == player.getCurrentRoom()) {
+        if  (player.getCurrentRoom().getEast() != null) {
+            player.setCurrentroom(player.getCurrentRoom().getEast());
+            System.out.println(player.getCurrentRoom().getDescription());
             return true;
         } else
         {
@@ -28,7 +33,9 @@ public class Adventure {
     }
 
     public boolean south() {
-        if (player.getCurrentRoom().getSouth() == player.getCurrentRoom()) {
+        if (player.getCurrentRoom().getSouth() != null) {
+            player.setCurrentroom(player.getCurrentRoom().getSouth());
+            System.out.println(player.getCurrentRoom().getDescription());
             return true;
 
         } else
@@ -39,7 +46,9 @@ public class Adventure {
     }
 
     public boolean west() {
-        if (player.getCurrentRoom().getWest() == player.getCurrentRoom()) {
+        if  (player.getCurrentRoom().getWest() != null) {
+            player.setCurrentroom(player.getCurrentRoom().getWest());
+            System.out.println(player.getCurrentRoom().getDescription());
             return true;
 
         } else
