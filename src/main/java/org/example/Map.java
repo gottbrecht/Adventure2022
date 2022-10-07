@@ -10,7 +10,7 @@ public class Map {
         Room room1 = new Room("Room 1", "Garage: Where your trashy car is parking");
         Room room2 = new Room("Room 2", "Painting room: Upgrade the surface of your car");
         Room room3 = new Room("Room 3", "Tires Factory: Upgrade your tires");
-        Room room4 = new Room("Room 4", "Electronic House: Rainbow diode lights");
+        Room room4 = new Room("Room 4", "Welcome to the electronic House: Get your rainbow diode lights");
         Room room5 = new Room("Room 5", "House Of Diamonds: End station for diamond logo and gear");
         Room room6 = new Room("Room 6", "Sound House: Upgrade your speaker: b&o sound system");
         Room room7 = new Room("Room 7", "Motor Room: More Horsepower for your baby");
