@@ -69,6 +69,14 @@ public class Room {
     public ArrayList<Item> getItems() {
         return items;
     }
+    /*public Item removeItem(String name){
+        for (Item item : roomItems){
+            if (item.getName().equals(name)){
+                roomItems.remove(item);
+                return item;
+            }
+        }
+        return null;*/
 
     @Override
     public String toString() {

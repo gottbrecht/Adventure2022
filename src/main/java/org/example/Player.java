@@ -49,6 +49,12 @@ public class Player {
         } else {
             return false;
         }
+        /*public ArrayList<Item> Inventory() {
+            return inventory;
+        }
+        public void addItem(Item item){
+            inventory.add(item);
+        }*/
     }
 
 }

@@ -1,6 +1,8 @@
 package org.example;
 import java.util.Scanner;
 public class Adventure {
+
+
     Room room = new Room("", "");
     Map map = new Map();
     Player player = new Player();
@@ -45,8 +47,12 @@ public class Adventure {
 
             return false;
         }
+        /* Calling move method from Player class
+        public boolean go(String direction){
+            return player.move(direction);*/
+        }
     }
-}
+
 
 
 
