@@ -1,16 +1,19 @@
 package org.example;
 
 import java.util.Scanner;
+
 public class UserInterface {
     Map map = new Map();
 
-    Room room = new Room("",".");
+    Room room = new Room("", ".");
     Player player = new Player();
 
     public void run() {
+
         Scanner scanner = new Scanner(System.in);
         Adventure adventure = new Adventure(player);
         player.setCurrentroom(adventure.map.getStartRoom());
+
         System.out.println("Welcome to the Pimp My Ride game!\n");
         System.out.println(" Description:\n In order to upgrade your trashy car,\n you need to " +
                 "explorer the 9 different areas, and enter the areas where you can gather gadgets or components.\n " +
@@ -21,39 +24,41 @@ public class UserInterface {
                 "When you head toward the wrong direction: Watch out for the wolves! " +
                 "You may have to go to another direction.\n " +
                 "If you want to end the game, just press exit. Enjoy your game!");
+
         System.out.println(" Your car is parked in the garage");
         System.out.println(" Type the direction you want to go here:");
         System.out.println(player.getCurrentRoom());
+
         do {
             Scanner sc = new Scanner(System.in);
             String playerInput = scanner.nextLine();
             playerInput = playerInput.toLowerCase();
             switch (playerInput) {
-                case "go north", "north","n":
+                case "go north", "north", "n":
                     if (adventure.north(player)) {
                         System.out.println("Going north" + player.getCurrentRoom() + room.getDescription());
                     } else
                         System.out.println("You can not go that way!");
                     break;
                 case "go east", "east":
-                    if (adventure.east(player)){
+                    if (adventure.east(player)) {
                         System.out.println("Going east" + player.getCurrentRoom() +
                                 room.getDescription());
-                    }else
-                    System.out.println("You can not go that way!");
+                    } else
+                        System.out.println("You can not go that way!");
                     break;
                 case "go south", "south":
                     if (adventure.south(player)) {
                         player.setCurrentroom(player.getCurrentRoom());
-                        System.out.println("Going south " + player.getCurrentRoom() );
-                    }else
-                    System.out.println("You can not go that way!");
+                        System.out.println("Going south " + player.getCurrentRoom());
+                    } else
+                        System.out.println("You can not go that way!");
                     break;
                 case "go west", "west":
                     if (adventure.west(player)) {
                         System.out.println("Going west " + player.getCurrentRoom() +
                                 room.getDescription());
-                    }else
+                    } else
                         System.out.println("You can not go that way!");
                     break;
                 case "help":
