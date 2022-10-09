@@ -57,4 +57,11 @@ public class Player {
         }*/
     }
 
+    public boolean getItem(Object itemName) {
+        return false;
+    }
+
+    public boolean dropItem(Object itemName) {
+        return false;
+    }
 }

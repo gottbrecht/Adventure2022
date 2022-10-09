@@ -3,7 +3,13 @@ package org.example;
 public class Adventure {
 
     Map map = new Map();
+    private Object itemName;
 
+    public Player getPlayer() {
+
+        Player player = new Player();
+        return player;
+    }
     public Adventure(Player player){
         player.setCurrentroom(map.getStartRoom());
     }
@@ -55,6 +61,14 @@ public class Adventure {
         {
 
             return false;
+        }
+
+        public boolean getItem(String itemName) {
+            return player.getItem(itemName)
+        }
+
+        public boolean dropItem(String itemName) {
+            return player.dropItem(itemName);
         }
         /* Calling move method from Player class
         public boolean go(String direction){
