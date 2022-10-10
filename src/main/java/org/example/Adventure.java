@@ -60,12 +60,12 @@ public class Adventure {
 
             return false;
         }
-
+ /*
         public boolean getItem (String itemName){
             return player.getItem(itemName)
         }
 
-        public boolean dropItem (String itemName){
+       public boolean dropItem (String itemName){
             return player.dropItem(itemName);
         }
         public Item getItem (String itemName){
@@ -85,14 +85,14 @@ public class Adventure {
                 if (item.getItemName().equals(itemName)) {
                     return item;
                 }
-            }
+            } */
 
         /* Calling move method from Player class
         public boolean go(String direction){
             return player.move(direction);*/
         }
     }
-}
+
 
 
 

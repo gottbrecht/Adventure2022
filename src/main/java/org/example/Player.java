@@ -59,6 +59,11 @@ public class Player {
 
     public Item getItem(Object itemName) {
 
+        // 1) find item med itemName i currentROOM
+
+        // 2) remove it from the room;
+        // 3) add the item to itemTaken.
+
         return null;
     }
 
