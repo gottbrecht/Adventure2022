@@ -23,8 +23,6 @@ public class Food extends Item {
         //the same weapon
 
      */
-        health = item.getHealth() {
-    }
 
 
     @Override
