@@ -86,11 +86,11 @@ public class UserInterface {
                     break;
 
                 case "get", "Get" -> {
-                    Item pickedUpItem = player.getItem();
-                    if (pickedUpItem == null) {
-                        System.out.println("There is nothing called that..");
+                    Item itemTaken = player.getItem();
+                    if (itemTaken == null) {
+                        System.out.println("It is not found in the room.");
                     } else {
-                        System.out.println("you have picked up " + pickedUpItem);
+                        System.out.println("you have taken " + itemTaken);
                         player.getItem();
                     }
                 }
