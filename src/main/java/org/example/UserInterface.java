@@ -84,6 +84,25 @@ public class UserInterface {
                 case "exit":
                     System.out.println("Exit - ending game");
                     break;
+
+                case "get", "Get" -> {
+                    Item pickedUpItem = player.getItem();
+                    if (pickedUpItem == null) {
+                        System.out.println("There is nothing called that..");
+                    } else {
+                        System.out.println("you have picked up " + pickedUpItem);
+                        player.getItem();
+                    }
+                }
+
+                case "drop", "Drop","remove", "Remove" -> {
+                    Item droppedItem = player.dropItem();
+                    if (droppedItem == null) {
+                        System.out.println("There is nothing called that..");
+                    } else {
+                        System.out.println("You have dropped " + droppedItem);
+                    }
+                }
             }
         } while (true);
 
