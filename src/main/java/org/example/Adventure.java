@@ -68,10 +68,10 @@ public class Adventure {
         public boolean dropItem (String itemName){
             return player.dropItem(itemName);
         }
-        public Item getItem (String itemName){
-            Item pickedUpItem = player.getCurrentRoom().removeItem(itemName);
-            addItem(pickedUpItem);
-            return pickedUpItem;
+        public Item itemTaken (String itemName){
+            Item item = player.getCurrentRoom().removeItem(itemName);
+            addItem(itemTaken);
+            return itemTaken;
         }
 
         public Item dropItem (String itemName){
