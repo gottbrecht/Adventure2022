@@ -11,6 +11,20 @@ public class Food extends Item {
     public int getHealth() {
         return health;
     }
+    /*Item item = findItem(name);
+    if(item==null) {
+        return  Enum.NOT_FOUND;
+    }else if (item instance of Food food/Weapon weapon){
+    health = food.getHealth();
+        return ENUM.EATEN;
+        }else{
+        return ENUM.NOT.FOOD;
+
+        //the same weapon
+
+     */
+        health = item.getHealth()
+    }
 
 
     @Override

@@ -63,16 +63,14 @@ public class Adventure {
             return false;
         }
 
-        public boolean getItem(String itemName) {
-            return player.getItem(itemName)
+        public String getItem(String itemName) {
+            return player.getItem(itemName);
         }
 
         public boolean dropItem(String itemName) {
             return player.dropItem(itemName);
         }
-        /* Calling move method from Player class
-        public boolean go(String direction){
-            return player.move(direction);*/
+
         }
     }
 
