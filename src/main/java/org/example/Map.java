@@ -34,6 +34,10 @@ public class Map {
         Item popcornMachine = new Item ("popcorn machine", "fresh made popcorn");
         Item sodaMachine=new Item("soda machine", "fresh made soda");
 
+        Food food1 = new Food("Ribeye", "Steak", 70);
+        Food food2 = new Food("Butter Chicken", "Indian cuisine", 85);
+        Food food3 = new Food("Yankie bar", "Energy bar", 25);
+
         room1.setEast(room2);
         room1.setSouth(room4);
         room1.addItem(cash);
@@ -73,6 +77,8 @@ public class Map {
         room9.addItem(leatherSeats);
         room9.addItem(carpet);
         room9.addItem(screen);
+
+
 
         startRoom =room1;
     }

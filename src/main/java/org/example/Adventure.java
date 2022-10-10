@@ -66,7 +66,7 @@ public class Adventure {
         }
 
         public boolean getItem(String itemName) {
-            return player.getItem(itemName)
+            return player.getItem(itemName);
         }
 
         public boolean dropItem(String itemName) {
