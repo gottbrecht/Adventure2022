@@ -33,28 +33,41 @@ public class UserInterface {
             Scanner sc = new Scanner(System.in);
             String playerInput = scanner.nextLine();
             playerInput = playerInput.toLowerCase();
-            switch (playerInput) {
-                case "go north", "north", "n":
+
+            String[] words = playerInput.split(" ");
+
+            String verb = words[0];
+            String noun = verb;
+
+            if(words.length>1) {
+                noun = words[1];
+            }
+
+            switch (verb) {
+                case "go":
+
+                break;
+                case  "north", "n":
                     if (adventure.north(player)) {
                         System.out.println("Going north" + player.getCurrentRoom() + room.getDescription());
                     } else
                         System.out.println("You can not go that way!");
                     break;
-                case "go east", "east":
+                case "east":
                     if (adventure.east(player)) {
                         System.out.println("Going east" + player.getCurrentRoom() +
                                 room.getDescription());
                     } else
                         System.out.println("You can not go that way!");
                     break;
-                case "go south", "south":
+                case  "south":
                     if (adventure.south(player)) {
                         player.setCurrentroom(player.getCurrentRoom());
                         System.out.println("Going south " + player.getCurrentRoom());
                     } else
                         System.out.println("You can not go that way!");
                     break;
-                case "go west", "west":
+                case  "west":
                     if (adventure.west(player)) {
                         System.out.println("Going west " + player.getCurrentRoom() +
                                 room.getDescription());
@@ -85,25 +98,29 @@ public class UserInterface {
                     System.out.println("Exit - ending game");
                     break;
 
-                case "get", "Get" -> {
-                    Item pickedUpItem = player.getItem();
-                    if (pickedUpItem == null) {
-                        System.out.println("There is nothing called that..");
+                case "take", "Take": {
+                    String itemName = noun;
+                    Item itemTaken = player.getItem(itemName);
+                    if (itemTaken == null) {
+                        System.out.println("It is not found in the room.");
                     } else {
-                        System.out.println("you have picked up " + pickedUpItem);
-                        player.getItem();
+                        System.out.println("you have taken " + itemTaken);
+                       // player.getItem();
                     }
                 }
-
+/*
                 case "drop", "Drop","remove", "Remove" -> {
-                    Item droppedItem = player.dropItem();
+                    Item droppedItem = adventure.dropItem();
                     if (droppedItem == null) {
-                        System.out.println("There is nothing called that..");
+                        System.out.println("It does found in this room.");
                     } else {
                         System.out.println("You have dropped " + droppedItem);
                     }
                 }
+
+ */
             }
+
         } while (true);
 
 
