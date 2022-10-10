@@ -57,11 +57,13 @@ public class Player {
         }*/
     }
 
-    public boolean getItem(Object itemName) {
-        return false;
+    public Item getItem(Object itemName) {
+
+        return null;
     }
 
-    public boolean dropItem(Object itemName) {
-        return false;
+    public Item dropItem(Object itemName) {
+
+        return null;
     }
 }

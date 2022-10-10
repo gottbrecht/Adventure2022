@@ -4,10 +4,10 @@ public class Adventure {
 
     Map map = new Map();
     private Object itemName;
+    private Player player= new Player();
+
 
     public Player getPlayer() {
-
-        Player player = new Player();
         return player;
     }
 
@@ -60,7 +60,7 @@ public class Adventure {
 
             return false;
         }
-
+    }
         public boolean getItem (String itemName){
             return player.getItem(itemName)
         }
