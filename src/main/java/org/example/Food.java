@@ -29,4 +29,7 @@ public class Food extends Item {
     public String toString() {
         return super.toString() + " " + health;
     }
+
+    public void add(Food food) {
+    }
 }

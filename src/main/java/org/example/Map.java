@@ -41,6 +41,7 @@ public class Map {
         room1.setEast(room2);
         room1.setSouth(room4);
         room1.addItem(cash);
+        room1.
 
         room2.setEast(room3);
         room2.setWest(room1);
