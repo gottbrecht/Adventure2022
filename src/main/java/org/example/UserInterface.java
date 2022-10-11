@@ -123,12 +123,4 @@ public class UserInterface {
 
 
     }
-    private String getNoun(String[]words) {
-        String noun = "";
-        for (int i = 1; i < words.length; i++) {
-            noun += " " + words[i];
-        }
-        return noun.trim();
-
-    }
 }
