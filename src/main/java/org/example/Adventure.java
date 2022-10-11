@@ -91,7 +91,11 @@ public class Adventure {
         public boolean go(String direction){
             return player.move(direction);*/
         }
+
+    public Item dropItem() {
+        return dropItem();
     }
+}
 
 
 

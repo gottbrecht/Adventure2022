@@ -39,15 +39,15 @@ public class UserInterface {
             String verb = words[0];
             String noun = verb;
 
-            if(words.length>1) {
+            if (words.length > 1) {
                 noun = words[1];
             }
 
             switch (verb) {
                 case "go":
 
-                break;
-                case  "north", "n":
+                    break;
+                case "north", "n":
                     if (adventure.north(player)) {
                         System.out.println("Going north" + player.getCurrentRoom() + room.getDescription());
                     } else
@@ -60,14 +60,14 @@ public class UserInterface {
                     } else
                         System.out.println("You can not go that way!");
                     break;
-                case  "south":
+                case "south":
                     if (adventure.south(player)) {
                         player.setCurrentroom(player.getCurrentRoom());
                         System.out.println("Going south " + player.getCurrentRoom());
                     } else
                         System.out.println("You can not go that way!");
                     break;
-                case  "west":
+                case "west":
                     if (adventure.west(player)) {
                         System.out.println("Going west " + player.getCurrentRoom() +
                                 room.getDescription());
@@ -105,11 +105,11 @@ public class UserInterface {
                         System.out.println("It is not found in the room.");
                     } else {
                         System.out.println("you have taken " + itemTaken);
-                       // player.getItem();
+                        // player.getItem();
                     }
                 }
-/*
-                case "drop", "Drop","remove", "Remove" -> {
+
+                case "drop", "Drop", "remove", "Remove": {
                     Item droppedItem = adventure.dropItem();
                     if (droppedItem == null) {
                         System.out.println("It does found in this room.");
@@ -118,8 +118,8 @@ public class UserInterface {
                     }
                 }
 
- */
             }
+
 
         } while (true);
 

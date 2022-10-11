@@ -7,6 +7,7 @@ public class Player {
     private Room currentRoom;
     private ArrayList<Item> inventory = new ArrayList<>();
 
+
     public Room getCurrentRoom() {
         return currentRoom;
     }
@@ -49,26 +50,38 @@ public class Player {
         } else {
             return false;
         }
-        /*public ArrayList<Item> Inventory() {
-            return inventory;
-        }
-        public void addItem(Item item){
-            inventory.add(item);
-        }*/
+
     }
 
-    public Item getItem(Object itemName) {
+    public ArrayList<Item> Inventory() {
+        return inventory;
+    }
+    public void addItem(Item item){
+        inventory.add(item);
+    }
+
+    public Item findItemInInventory(String itemName) {
+
+        for(int i = 0; i < playerInput; i++) {
+            findItemInInventory().add(i);
+        }
 
         // 1) find item med itemName i currentROOM
 
         // 2) remove it from the room;
         // 3) add the item to itemTaken.
+//loop igennem item og find item
 
-        return null;
+
+    public boolean dropItem(String itemName) {
+        Item item = findItemInInventory(itemName);
+        if(item != null) {
+            inventory.remove(item);
+            getCurrentRoom().addItem(item);
+            return true;
+        }else {
+            return false;
+        }
     }
 
-    public Item dropItem(Object itemName) {
-
-        return null;
-    }
 }
