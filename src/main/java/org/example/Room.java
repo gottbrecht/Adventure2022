@@ -22,12 +22,13 @@ public class Room {
         items.add(item);
     }
 
-    private String Food;
+    private Food Food;
 
-    private ArrayList<Food> food = new ArrayList<>();
+    private ArrayList<Food> food = new ArrayList<Food>();
 
-    public void addFood(org.example.Food food3) {
-        food.add(food);
+    public String addFood(Food food3) {
+        food.add(Food);
+        return null; //???
     }
 
     //Getter
@@ -85,11 +86,11 @@ public class Room {
             }
         }
         return null;*/
-
     @Override
     public String toString() {
         return "Room {" +
                 "name= " + name + '\'' + ", description='" + description + '\'' + '}';
 
     }
+
 }

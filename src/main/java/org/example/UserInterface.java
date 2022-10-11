@@ -21,7 +21,7 @@ public class UserInterface {
                 " Along the game, you get the fancy upgrades, like a new speaker, or the golden wheels." +
                 "\n You can type 'go north', 'south', 'east' or 'west'.\n You may also choose to type 'look', to repeat" +
                 " description of the area, or 'help'.\n " +
-                "When you head toward the wrong direction: Watch out for the wolves! " +
+                "A long the game you will meet monsters that you have to get rid of! Type 'Pick up weapon' to kill them!" +
                 "You may have to go to another direction.\n " +
                 "If you want to end the game, just press exit. Enjoy your game!");
 
@@ -83,7 +83,7 @@ public class UserInterface {
                     } else if (choice == 2) {
                         System.out.println("You are handsome.");
                     } else {
-                        System.out.println("You have not entered the correct answer!");
+                        System.out.println("You have not entered the correct answer!"); //not done
 
                     }
 
