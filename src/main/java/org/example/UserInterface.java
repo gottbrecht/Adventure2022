@@ -37,11 +37,8 @@ public class UserInterface {
             String[] words = playerInput.split(" ");
 
             String verb = words[0];
-            String noun = verb;
+            String noun = getNoun(words);
 
-            if (words.length > 1) {
-                noun = words[1];
-            }
 
             switch (verb) {
                 case "go":
@@ -124,6 +121,14 @@ public class UserInterface {
 
         } while (true);
 
+
+    }
+    private String getNoun(String[]words) {
+        String noun = "";
+        for (int i = 1; i < words.length; i++) {
+            noun += " " + words[i];
+        }
+        return noun.trim();
 
     }
 }
