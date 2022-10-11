@@ -80,8 +80,6 @@ public class Map {
         room9.addItem(carpet);
         room9.addItem(screen);
 
-
-
         startRoom =room1;
     }
     public Room getStartRoom() {

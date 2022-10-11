@@ -37,11 +37,8 @@ public class UserInterface {
             String[] words = playerInput.split(" ");
 
             String verb = words[0];
-            String noun = verb;
+            String noun = getNoun(words);
 
-            if (words.length > 1) {
-                noun = words[1];
-            }
 
             switch (verb) {
                 case "go":
@@ -111,8 +108,9 @@ public class UserInterface {
                 }
 
                 case "drop", "Drop", "remove", "Remove": {
-                    Item droppedItem = player.dropItem();
-                    if (droppedItem == null) {
+                    String itemName=noun;
+                    boolean droppedItem = player.dropItem(itemName);
+                    if (droppedItem == false) {
                         System.out.println("It does found in this room.");
                     } else {
                         System.out.println("You have dropped " + droppedItem);
@@ -125,5 +123,12 @@ public class UserInterface {
         } while (true);
 
 
+    }
+    private String getNoun(String[]words){
+        String noun="";
+        for (int i=1; i <words.length; i++){
+            noun+=" "+words[i];
+        }
+        return noun.trim();
     }
 }
