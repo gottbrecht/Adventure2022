@@ -92,9 +92,6 @@ public class Adventure {
             return player.move(direction);*/
         }
 
-    public Item dropItem() {
-        return dropItem();
-    }
 }
 
 

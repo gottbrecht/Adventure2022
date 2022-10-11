@@ -60,11 +60,19 @@ public class Player {
         inventory.add(item);
     }
 
+
+    /*public Item dropItem() {
+        return dropItem();*/
+
     public Item findItemInInventory(String itemName) {
 
-        for(int i = 0; i < playerInput; i++) {
-            findItemInInventory().add(i);
+        for (int i = 0; i < inventory.size(); i++) {
+            if(inventory.get(i).itemName.equalsIgnoreCase(itemName)){
+                return inventory.get(i);
+            }
         }
+        return null;
+    }
 
         // 1) find item med itemName i currentROOM
 

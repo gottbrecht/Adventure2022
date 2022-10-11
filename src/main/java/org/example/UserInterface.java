@@ -100,17 +100,18 @@ public class UserInterface {
 
                 case "take", "Take": {
                     String itemName = noun;
-                    Item itemTaken = player.getItem(itemName);
+                    Item itemTaken = player.getCurrentRoom().getItem(itemName);
                     if (itemTaken == null) {
                         System.out.println("It is not found in the room.");
                     } else {
                         System.out.println("you have taken " + itemTaken);
-                        // player.getItem();
+                        player.addItem(itemTaken);
+                        player.getCurrentRoom().getItems().remove(itemTaken);
                     }
                 }
 
                 case "drop", "Drop", "remove", "Remove": {
-                    Item droppedItem = adventure.dropItem();
+                    Item droppedItem = player.dropItem();
                     if (droppedItem == null) {
                         System.out.println("It does found in this room.");
                     } else {

@@ -86,6 +86,16 @@ public class Room {
             }
         }
         return null;*/
+    public Item getItem(String itemName) {
+
+        for (int i = 0; i < items.size(); i++) {
+            if(items.get(i).itemName.equalsIgnoreCase(itemName)){
+                return items.get(i);
+            }
+        }
+        return null;
+    }
+
     @Override
     public String toString() {
         return "Room {" +

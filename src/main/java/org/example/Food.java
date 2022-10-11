@@ -14,7 +14,7 @@ public class Food extends Item {
     /*Item item = findItem(name);
     if(item==null) {
         return  Enum.NOT_FOUND;
-    }else if (item instance of Food food/Weapon weapon){
+    }else if (item instance of Food food/org.example.Weapon weapon){
     health = food.getHealth();
         return ENUM.EATEN;
         }else{

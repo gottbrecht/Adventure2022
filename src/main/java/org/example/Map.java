@@ -14,8 +14,7 @@ public class Map {
         Room room5 = new Room("Room 5", "House Of Diamonds: End station for diamond logo and gear");
         Room room6 = new Room("Room 6", "Sound House: Upgrade your speaker: b&o sound system");
         Room room7 = new Room("Room 7", "Motor Room: More Horsepower for your baby");
-        Room room8 = new Room("Room 8", "Gadget Room: Get your Soda-and Popcorn Machine, " +
-                "massage chair, mocha machine");
+        Room room8 = new Room("Room 8", "Gadget Room: Get your Popcorn Machine");
         Room room9 = new Room("Room 9", "Interior Hall: Leather seats, fur carpet, movie screen");
 
         Item cash = new Item("cash", "Go work in the garage and earn money");
@@ -29,14 +28,16 @@ public class Map {
         Item carpet =new Item ("fur carpet", "fancy carpet for the car");
         Item leatherSeats =new Item("leather seats","top soft leather seats");
         Item screen=new Item("movie screen", "watch moive in the car");
-
-        Item coffeMachine = new Item("coffee machine", "Express coffee in one 1 minut");
+        Weapon weapon1 = new Weapon("Machine Gun", "The most powerfull weapon", 30);
+        Weapon weapon2 = new Weapon("Bombs", "Super destroyer", 78);
+        Weapon weapon3 = new Weapon("Hand Gun", "The Walther PPK used by 007", 23);
+        
         Item popcornMachine = new Item ("popcorn machine", "fresh made popcorn");
-        Item sodaMachine=new Item("soda machine", "fresh made soda");
 
         Food food1 = new Food("Ribeye", "Steak", 70);
         Food food2 = new Food("Carrot", "For greater health", 85);
         Food food3 = new Food("Yankie bar", "Energy bar", 25);
+
 
         room1.setEast(room2);
         room1.setSouth(room4);
@@ -70,8 +71,6 @@ public class Map {
         room8.setNorth(room5);
         room8.setWest(room7);
         room8.setEast(room9);
-        room8.addItem(coffeMachine);
-        room8.addItem(sodaMachine);
         room8.addItem(popcornMachine);
         room8.addFood(food1);
 
