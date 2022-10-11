@@ -26,7 +26,7 @@ public class Room {
 
     private ArrayList<Food> food = new ArrayList<>();
 
-    public void addFood(Food food) {
+    public void addFood(org.example.Food food3) {
         food.add(food);
     }
 

@@ -10,7 +10,9 @@ public class Map {
         Room room1 = new Room("Room 1", "Garage: Where your trashy car is parking");
         Room room2 = new Room("Room 2", "Painting room: Upgrade the surface of your car");
         Room room3 = new Room("Room 3", "Tires Factory: Upgrade your tires");
-        Room room4 = new Room("Room 4", "Welcome to the electronic House: Get your rainbow diode lights");
+        Room room4 = new Room("Room 4", "Welcome to the electronic House: Get your rainbow diode lights." +
+                "\n" +
+                "Wooopsiiie, you nearly stepped over the Ribeye Steak.\nType 'pick up ribeye' to get to the next area");
         Room room5 = new Room("Room 5", "House Of Diamonds: End station for diamond logo and gear");
         Room room6 = new Room("Room 6", "Sound House: Upgrade your speaker: b&o sound system");
         Room room7 = new Room("Room 7", "Motor Room: More Horsepower for your baby");
@@ -35,17 +37,17 @@ public class Map {
         Item sodaMachine=new Item("soda machine", "fresh made soda");
 
         Food food1 = new Food("Ribeye", "Steak", 70);
-        Food food2 = new Food("Butter Chicken", "Indian cuisine", 85);
+        Food food2 = new Food("Carrot", "For greater health", 85);
         Food food3 = new Food("Yankie bar", "Energy bar", 25);
 
         room1.setEast(room2);
         room1.setSouth(room4);
         room1.addItem(cash);
-        room1.
 
         room2.setEast(room3);
         room2.setWest(room1);
         room2.addItem(carPaint);
+        room2.addFood(food3);
 
         room3.setWest(room2);
         room3.setSouth(room6);
@@ -65,6 +67,7 @@ public class Map {
         room7.setNorth(room4);
         room7.setEast(room8);
         room7.addItem(motor);
+        room7.addFood(food2);
 
         room8.setNorth(room5);
         room8.setWest(room7);
@@ -72,6 +75,7 @@ public class Map {
         room8.addItem(coffeMachine);
         room8.addItem(sodaMachine);
         room8.addItem(popcornMachine);
+        room8.addFood(food1);
 
         room9.setNorth(room6);
         room9.setWest(room8);
