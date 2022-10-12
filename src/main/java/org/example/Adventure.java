@@ -4,7 +4,7 @@ public class Adventure {
 
     Map map = new Map();
     private Object itemName;
-    private Player player= new Player();
+    private Player player = new Player();
 
 
     public Player getPlayer() {
@@ -60,6 +60,7 @@ public class Adventure {
 
             return false;
         }
+
  /*
         public boolean getItem (String itemName){
             return player.getItem(itemName)
@@ -92,7 +93,8 @@ public class Adventure {
             return player.move(direction);*/
         }
 
-}
+    }
+
 
 
 

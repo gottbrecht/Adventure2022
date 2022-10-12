@@ -50,7 +50,6 @@ public class Player {
         } else {
             return false;
         }
-
     }
 
     public ArrayList<Item> Inventory() {
@@ -61,8 +60,9 @@ public class Player {
     }
 
 
-    /*public Item dropItem() {
-        return dropItem();*/
+    public Item droppetItem() {
+        return droppetItem();
+    }
 
     public Item findItemInInventory(String itemName) {
 
@@ -73,6 +73,7 @@ public class Player {
         }
         return null;
     }
+
 
         // 1) find item med itemName i currentROOM
 
@@ -93,5 +94,26 @@ public class Player {
 
         //public void eatFood(){
     }
+    public  enum eatFood {
+        NOT_FOUND,
+        EATAN,
+        NOT_FOOD
+    }
+    /*
+    Item item =findItemInInventory(currentRoom.getName());
+    if(item=null){
+        return enum NOT_FOUND;
+    } else if (item instanceof food) {
+        health + =food.getHealth();
+        return enum EATAN;
+    }else {
+        return enum NOT_FOOD;
+    }
+    */
+
+    public Item eatFood (String itemName){
+        return eatFood(itemName);
+    }
+
 
 }

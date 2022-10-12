@@ -11,6 +11,10 @@ public class Food extends Item {
     public int getHealth() {
         return health;
     }
+    public Player setHealth(int health) {
+        this.health = this.health + health;
+        return null;
+    }
     /*Item item = findItem(name);
     if(item==null) {
         return  Enum.NOT_FOUND;
