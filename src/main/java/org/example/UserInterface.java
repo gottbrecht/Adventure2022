@@ -102,6 +102,7 @@ public class UserInterface {
                         player.getCurrentRoom().getItems().remove(itemTaken);
                     }
                 }
+                    break;
 
                 case "drop", "Drop", "remove", "Remove": {
                     String itemName = noun;
@@ -110,6 +111,20 @@ public class UserInterface {
                         System.out.println("It it not found in this room.");
                     } else {
                         System.out.println("You have dropped " + droppedItem);
+                    }
+                }
+                    break;
+
+                case "eat", "Eat": {
+                    String itemName = noun;
+                    Item itemTaken = player.getCurrentRoom().getItem(itemName);
+                    if (itemTaken == null) {
+                        System.out.println("You cannot eat that.");
+                    } else {
+                        System.out.println("you can eat" + itemTaken);
+                        player.addItem(itemTaken);
+                        player.getCurrentRoom().getItems().remove(itemTaken);
+
                     }
                 }
 

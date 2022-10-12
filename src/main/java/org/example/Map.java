@@ -10,7 +10,7 @@ public class Map {
         Room room1 = new Room("Room 1", " Garage : Where your trashy car is parking. " +
                 "Take machine gun for protection!");
         Room room2 = new Room("Room 2", " Painting room : Upgrade the surface of your car. Take car paint." +
-                " Take yankie bar to increase your energy level.");
+                " Eat yankie bar to increase your energy level.");
         Room room3 = new Room("Room 3", " Tires Factory : Upgrade your tires. Ooops you ran out of cash." +
                 " Take cash.");
         Room room4 = new Room("Room 4", " Welcome to the electronic House : Get your rainbow diode lights.");
@@ -36,6 +36,9 @@ public class Map {
         Weapon weapon3 = new Weapon("Hand Gun", "The Walther PPK used by 007", 23);
         
         Item popcornMachine = new Item ("popcorn machine", "fresh made popcorn");
+
+        Enemy enemy1 = new Enemy("Giant oil monster", "Destroyed by using Machine Gun");
+      //  Enemy enemy2 = new Enemy("")
 
         Food food1 = new Food("Ribeye", "Steak", 70);
         Food food2 = new Food("Carrot", "For greater health", 85);
