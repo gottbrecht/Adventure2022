@@ -16,18 +16,17 @@ public class UserInterface {
 
         System.out.println("Welcome to the Pimp My Ride game!\n");
         System.out.println(" Description:\n In order to upgrade your trashy car,\n you need to " +
-                "explorer the 9 different areas, and enter the areas where you can gather gadgets or components.\n " +
+                "explorer 9 different areas, and enter the areas where you can gather gadgets or components.\n " +
                 "When you enter the last area, which is your goal of the game,\n you enter House Of Diamonds.\n" +
                 " Along the game, you get the fancy upgrades, like a new speaker, or the golden wheels." +
-                "\n You can type 'go north', 'south', 'east' or 'west'.\n You may also choose to type 'look', to repeat" +
+                "\n You can type 'north', 'south', 'east' or 'west'.\n You may also choose to type 'look', to repeat" +
                 " description of the area, or 'help'.\n " +
-                "A long the game you will meet monsters that you have to get rid of! Type 'Pick up weapon' to kill them!" +
+                "A long the game you will meet monsters that you have to get rid of! Type 'take weapon'." +
                 "You may have to go to another direction.\n " +
                 "If you want to end the game, just press exit. Enjoy your game!");
 
-        System.out.println(" Your car is parked in the garage");
-        System.out.println(" Type the direction you want to go here:");
-        System.out.println(player.getCurrentRoom());
+        System.out.println(" You are here:");
+        System.out.println(player.getCurrentRoom().getDescription());
 
         do {
             Scanner sc = new Scanner(System.in);
@@ -46,28 +45,25 @@ public class UserInterface {
                     break;
                 case "north", "n":
                     if (adventure.north(player)) {
-                        System.out.println("Going north" + player.getCurrentRoom() + room.getDescription());
+                        System.out.println(player.getCurrentRoom().getDescription());
                     } else
                         System.out.println("You can not go that way!");
                     break;
                 case "east":
                     if (adventure.east(player)) {
-                        System.out.println("Going east" + player.getCurrentRoom() +
-                                room.getDescription());
+                        System.out.println(player.getCurrentRoom().getDescription());
                     } else
                         System.out.println("You can not go that way!");
                     break;
                 case "south":
                     if (adventure.south(player)) {
-                        player.setCurrentroom(player.getCurrentRoom());
-                        System.out.println("Going south " + player.getCurrentRoom());
+                        System.out.println(player.getCurrentRoom().getDescription());
                     } else
                         System.out.println("You can not go that way!");
                     break;
                 case "west":
                     if (adventure.west(player)) {
-                        System.out.println("Going west " + player.getCurrentRoom() +
-                                room.getDescription());
+                        System.out.println(player.getCurrentRoom().getDescription());
                     } else
                         System.out.println("You can not go that way!");
                     break;
@@ -108,9 +104,10 @@ public class UserInterface {
                 }
 
                 case "drop", "Drop", "remove", "Remove": {
-                    Item droppedItem = player.dropItem();
-                    if (droppedItem == null) {
-                        System.out.println("It does found in this room.");
+                    String itemName = noun;
+                    boolean droppedItem = player.dropItem(itemName);
+                    if (droppedItem == false) {
+                        System.out.println("It it not found in this room.");
                     } else {
                         System.out.println("You have dropped " + droppedItem);
                     }
@@ -120,6 +117,15 @@ public class UserInterface {
 
 
         } while (true);
+
+
+    }
+    private String getNoun(String[]words) {
+        String noun =" ";
+        for(int i=1; i <words.length; i++) {
+            noun += " " + words[i];
+        }
+        return noun.trim();
 
 
     }

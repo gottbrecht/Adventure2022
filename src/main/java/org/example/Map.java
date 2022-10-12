@@ -7,15 +7,18 @@ public class Map {
     public Map(){
 
     //private Room currentRoom = new Room("Room 1", "First room");
-        Room room1 = new Room("Room 1", "Garage: Where your trashy car is parking");
-        Room room2 = new Room("Room 2", "Painting room: Upgrade the surface of your car");
-        Room room3 = new Room("Room 3", "Tires Factory: Upgrade your tires");
-        Room room4 = new Room("Room 4", "Welcome to the electronic House: Get your rainbow diode lights.");
-        Room room5 = new Room("Room 5", "House Of Diamonds: End station for diamond logo and gear");
-        Room room6 = new Room("Room 6", "Sound House: Upgrade your speaker: b&o sound system");
-        Room room7 = new Room("Room 7", "Motor Room: More Horsepower for your baby");
-        Room room8 = new Room("Room 8", "Gadget Room: Get your Popcorn Machine");
-        Room room9 = new Room("Room 9", "Interior Hall: Leather seats, fur carpet, movie screen");
+        Room room1 = new Room("Room 1", " Garage : Where your trashy car is parking. " +
+                "Take machine gun for protection!");
+        Room room2 = new Room("Room 2", " Painting room : Upgrade the surface of your car. Take car paint." +
+                " Take yankie bar to increase your energy level.");
+        Room room3 = new Room("Room 3", " Tires Factory : Upgrade your tires. Ooops you ran out of cash." +
+                " Take cash.");
+        Room room4 = new Room("Room 4", " Welcome to the electronic House : Get your rainbow diode lights.");
+        Room room5 = new Room("Room 5", " House Of Diamonds : End station for diamond logo and gear");
+        Room room6 = new Room("Room 6", " Sound House : Upgrade your speaker: b&o sound system");
+        Room room7 = new Room("Room 7", " Motor Room : More Horsepower for your baby");
+        Room room8 = new Room("Room 8", " Gadget Room : Get your Popcorn Machine");
+        Room room9 = new Room("Room 9", " Interior Hall : Leather seats, fur carpet, movie screen");
 
         Item cash = new Item("cash", "Go work in the garage and earn money");
         Item goldenWheels = new Item("golden wheels", "pure 18 karat gold");
@@ -39,9 +42,11 @@ public class Map {
         Food food3 = new Food("Yankie bar", "Energy bar", 25);
 
 
+
         room1.setEast(room2);
         room1.setSouth(room4);
-        room1.addItem(cash);
+        room1.addItem(weapon1);
+
 
         room2.setEast(room3);
         room2.setWest(room1);
@@ -51,6 +56,8 @@ public class Map {
         room3.setWest(room2);
         room3.setSouth(room6);
         room3.addItem(goldenWheels);
+        room3.addItem(cash);
+        room3.addItem(weapon2);
 
         room4.setNorth(room1);
         room4.setSouth(room7);
@@ -73,6 +80,7 @@ public class Map {
         room8.setEast(room9);
         room8.addItem(popcornMachine);
         room8.addFood(food1);
+        room8.addItem(weapon3);
 
         room9.setNorth(room6);
         room9.setWest(room8);

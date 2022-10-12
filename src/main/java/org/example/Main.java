@@ -5,4 +5,8 @@ public class Main {
         UserInterface ui = new UserInterface();
         ui.run();
     }
+
+    public enum EguipReturnWeapon {
+
+    }
 }

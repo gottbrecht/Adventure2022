@@ -18,7 +18,7 @@ public class Adventure {
     public boolean north(Player player) {
         if (player.getCurrentRoom().getNorth() != null) {
             player.setCurrentroom(player.getCurrentRoom().getNorth());
-            System.out.println(player.getCurrentRoom().getDescription());
+
             return true;
 
         } else {
@@ -31,7 +31,7 @@ public class Adventure {
         if (player.getCurrentRoom().getEast() != null)
             /*(player.getCurrentRoom().setEast(Room east) !=null */ {
             player.setCurrentroom(player.getCurrentRoom().getEast());
-            System.out.println(player.getCurrentRoom().getDescription());
+
             return true;
         } else {
             return false;
@@ -41,7 +41,7 @@ public class Adventure {
     public boolean south(Player player) {
         if (player.getCurrentRoom().getSouth() != null) {
             player.setCurrentroom(player.getCurrentRoom().getSouth());
-            System.out.println(player.getCurrentRoom().getDescription());
+
             return true;
 
         } else {
@@ -53,7 +53,7 @@ public class Adventure {
     public boolean west(Player player) {
         if (player.getCurrentRoom().getWest() != null) {
             player.setCurrentroom(player.getCurrentRoom().getWest());
-            System.out.println(player.getCurrentRoom().getDescription());
+
             return true;
 
         } else {

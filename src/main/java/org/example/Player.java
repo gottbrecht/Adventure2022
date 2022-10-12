@@ -90,6 +90,8 @@ public class Player {
         }else {
             return false;
         }
+
+        //public void eatFood(){
     }
 
 }
