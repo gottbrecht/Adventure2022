@@ -60,7 +60,7 @@ public class Player {
     }
 
 
-    public Item droppetItem() {
+  public Item droppetItem() {
         return droppetItem();
     }
 
