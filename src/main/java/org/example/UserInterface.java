@@ -140,7 +140,7 @@ public class UserInterface {
                     if (didEat) {
                         // remember to remove food from room after eating
                         System.out.println("You have eaten " + foundFood.getItemName());
-                        System.out.println("This gives you:" + foundFood.getHealth() + "health points.");
+                        System.out.println("This gives you:" + foundFood.getHealth() + " health points.");
                     } else {
                         System.out.println("There is no food in the room.");
                     }
