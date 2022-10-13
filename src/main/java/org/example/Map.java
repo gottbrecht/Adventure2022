@@ -9,8 +9,8 @@ public class Map {
     //private Room currentRoom = new Room("Room 1", "First room");
         Room room1 = new Room("Room 1", " Garage : Where your trashy car is parking. " +
                 "Take machine gun for protection!");
-        Room room2 = new Room("Room 2", " Painting room : Upgrade the surface of your car. Take car paint." +
-                " Eat yankie bar to increase your energy level.");
+        Room room2 = new Room("Room 2", " Painting room : where you could upgrade the surface of your car,by typing 'take car paint'." +
+                "Food :'Yankie bar' is in the room.");
         Room room3 = new Room("Room 3", " Tires Factory : Upgrade your tires. Ooops you ran out of cash." +
                 " Take cash.");
         Room room4 = new Room("Room 4", " Welcome to the electronic House : Get your rainbow diode lights.");
@@ -43,8 +43,6 @@ public class Map {
         Food food1 = new Food("Ribeye", "Steak", 70);
         Food food2 = new Food("Carrot", "For greater health", 85);
         Food food3 = new Food("Yankie bar", "Energy bar", 25);
-
-
 
         room1.setEast(room2);
         room1.setSouth(room4);
