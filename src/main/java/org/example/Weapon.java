@@ -4,9 +4,11 @@ import org.example.Item;
 
 import java.util.ArrayList;
 
-public class Weapon extends Item {
+public abstract class Weapon extends Item {
 
     private double damageLevel;
+
+    int ammunition;
 
     //ArrayList<org.example.Weapon> org.example.Weapon = new ArrayList<>();
 
@@ -17,4 +19,6 @@ public class Weapon extends Item {
         super(itemName, itemDescription);
         this.damageLevel = damageLevel;
     }
+
+    public abstract void useAmmo();
 }

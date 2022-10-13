@@ -6,7 +6,7 @@ public class UserInterface {
     Map map = new Map();
     Food food = new Food("", "", 30);
 
-    Room room = new Room("", ".");
+    Room room = new Room("", "");
     Player player = new Player();
 
     public void run() {
@@ -103,7 +103,7 @@ public class UserInterface {
 
                     break;
 
-                case "take", "Take": {
+                case "take", "Take", "pick up": {
                     String itemName = noun;
                     Item itemTaken = player.getCurrentRoom().getItem(itemName);
                     if (itemTaken == null) {
@@ -140,6 +140,29 @@ public class UserInterface {
                     }
                 }
                break;
+
+                case "attack":
+
+                    /*Attack attack = adventure.attack(userChoice);
+                    Item searchForEquippedItem = adventure.getCurrentWeapon();
+                    Item roomInventory = adventure.searchItemInv(userChoice);
+
+                    if (attack == Attack.ATTACK_RANGE) {
+                        System.out.println("Range attack. " + ((org.example.RangedWeapon) searchForEquippedItem).getDamage() + " damage dealt");
+                        System.out.println(((org.example.RangedWeapon) searchForEquippedItem).getAmmunition() + " ammunition left");
+                    } else if (attack == Attack.ATTACK_MELEE) {
+                        System.out.println("Melee attack. " + ((MeleeWeapon) searchForEquippedItem).getDamage() + " damage dealt");
+                    } else if (attack == Attack.NO_AMMO) {
+                        System.out.println("No ammunition left");
+                    } else if (attack == Attack.NOT_EQUIPPED) {
+                        System.out.println("You dont have " + roomInventory + " equipped");
+                    } else {
+                        System.out.println("Invalid input (nothing matched your search)");
+                    }
+                    break;*/
+
+
+
              /* case "eat", "Eat": {
                     String itemName = noun;
                     Item itemTaken = player.getCurrentRoom().getItem(itemName);
