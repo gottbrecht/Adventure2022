@@ -25,6 +25,7 @@ public class UserInterface {
                 "\n You may have to go to another direction, when you encounter: 'you can't go this way.' " +
                 "\n You may type 'look', when you need to check where you are now." +
                 "\n Type'help' when you need some assistance." +
+                "\n Type'take'and the name of the component or upgrating method, in order to upgrade your car." +
                 "\n Type'eat'and the name of the food you want eat,in order to get the health points." +
                 "\n A long the game you will meet monsters that you have to get rid of! Type 'take weapon'." +
                 "\n Type'drop'and the name of the item you want drop,when you need to remove one or more items." +
