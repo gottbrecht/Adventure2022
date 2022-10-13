@@ -15,9 +15,9 @@ public class RangedWeapon extends Weapon {
         }
     }
 
-    @Override
+    /*@Override
         public void useAmmo() {
-        ammunition--;
+        ammunition--;*/
     }
 
 }
