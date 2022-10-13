@@ -31,9 +31,9 @@ public class Map {
         Item carpet =new Item ("fur carpet", "fancy carpet for the car");
         Item leatherSeats =new Item("leather seats","top soft leather seats");
 
-        Weapon weapon1 = new Weapon("Machine Gun", "The most powerfull weapon", 30);
+        /*Weapon weapon1 = new Weapon("Machine Gun", "The most powerfull weapon", 30);
         Weapon weapon2 = new Weapon("Bombs", "Super destroyer", 78);
-        Weapon weapon3 = new Weapon("Hand Gun", "The Walther PPK used by 007", 23);
+        Weapon weapon3 = new Weapon("Hand Gun", "The Walther PPK used by 007", 23);*/
         
         Item popcornMachine = new Item ("popcorn machine", "fresh made popcorn");
 
@@ -48,7 +48,7 @@ public class Map {
 
         room1.setEast(room2);
         room1.setSouth(room4);
-        room1.addItem(weapon1);
+        //room1.addItem(weapon1);
 
 
         room2.setEast(room3);
@@ -60,7 +60,7 @@ public class Map {
         room3.setSouth(room6);
         room3.addItem(goldenWheels);
         room3.addItem(cash);
-        room3.addItem(weapon2);
+        //room3.addItem(weapon2);
 
         room4.setNorth(room1);
         room4.setSouth(room7);
@@ -85,7 +85,7 @@ public class Map {
         room8.setEast(room9);
         room8.addItem(popcornMachine);
         room8.addFood(food1);
-        room8.addItem(weapon3);
+        //room8.addItem(weapon3);
 
         room9.setNorth(room6);
         room9.setWest(room8);

@@ -22,15 +22,15 @@ public class Room {
         items.add(item);
     }
 
-    private Food Food;
 
-    private ArrayList<Food> food = new ArrayList<Food>();
+    private ArrayList<Food> foodlist = new ArrayList<Food>();
 
-    public String addFood(Food food3) {
-        food.add(Food);
-        return null; //???
+    public void addFood(Food food) {
+        foodlist.add(food);
     }
-
+    public ArrayList<Food> getFood(){
+        return foodlist;
+    }
     //Getter
     public String getName() {
         return name;

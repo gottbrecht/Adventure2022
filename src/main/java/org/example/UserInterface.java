@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class UserInterface {
     Map map = new Map();
-    Food food = new Food("", "", 30);
 
     Room room = new Room("", "");
     Player player = new Player();
@@ -123,21 +122,27 @@ public class UserInterface {
                     if (droppedItem == false) {
                         System.out.println("It it not found in this room.");
                     } else {
-                        System.out.println("You have drop off" + player.droppetItem());
+                        System.out.println("You have drop off " + itemName);
                     }
                 }
                 break;
 
                 case "eat", "Eat": {
-                    for (Item item : player.getCurrentRoom().getItems()
-                    ) {
-                        if (item instanceof Food) {
-                            System.out.println("You have eaten " + item);
-                            System.out.println("This gives you:" + food.getHealth() + "health points.");
-                        } else {
-                            System.out.println("There is no food in the room.");
+                    boolean didEat = false;
+                    Food foundFood = null;
+                    for (Food food : player.getCurrentRoom().getFood()) {
+                        if (food.getItemName().equalsIgnoreCase(noun)) {
+                            didEat = true;
+                            foundFood = food;
                         }
+                    }
 
+                    if (didEat) {
+                        // remember to remove food from room after eating
+                        System.out.println("You have eaten " + foundFood.getItemName());
+                        System.out.println("This gives you:" + foundFood.getHealth() + "health points.");
+                    } else {
+                        System.out.println("There is no food in the room.");
                     }
                 }
                break;
@@ -189,7 +194,7 @@ public class UserInterface {
 
 
                 case "inventory", "Inventory": {
-                    System.out.println("These items are in your inventory: " + adventure.getPlayer().findItemInInventory(""));
+                    System.out.println("These items are in your inventory: " + adventure.getPlayer().getInventory());
                 }
 
             }

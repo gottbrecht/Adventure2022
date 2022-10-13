@@ -4,7 +4,7 @@ public class Adventure {
 
     Map map = new Map();
     private Object itemName;
-    private Player player = new Player();
+    private Player player;
 
 
     public Player getPlayer() {
@@ -12,6 +12,7 @@ public class Adventure {
     }
 
     public Adventure(Player player) {
+        this.player = player;
         player.setCurrentroom(map.getStartRoom());
     }
 

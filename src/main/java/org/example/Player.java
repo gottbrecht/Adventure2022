@@ -16,7 +16,9 @@ public class Player {
         this.currentRoom = room;
 
     }
-
+    public ArrayList<Item> getInventory(){
+        return inventory;
+    }
     public boolean north() {
         return north();
     }
@@ -60,7 +62,7 @@ public class Player {
     }
 
 
-  public Item droppetItem() {
+    public Item droppetItem() {
         return droppetItem();
     }
 
